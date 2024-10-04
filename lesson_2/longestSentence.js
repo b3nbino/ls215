@@ -30,7 +30,7 @@ let longText =
   " earth.";
 
 function longestSentence(text) {
-  let allSentences = text.match(/\w[^\.?!]+[\.?!]/gi); //Separate text into sentences
+  let allSentences = text.match(/\w[^\.?!]*[\.?!]/gi); //Separate text into sentences
   let longest = "";
 
   //Does not count empty strings as words
@@ -65,3 +65,8 @@ longestSentence(longText);
 // Four score and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal.
 
 // The longest sentence has 30 words.
+
+longestSentence("I!");
+// I!
+
+// The longest sentence has 1 word(s).
