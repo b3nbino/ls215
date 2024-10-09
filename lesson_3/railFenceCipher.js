@@ -46,6 +46,21 @@
  *       rail and has placed a letter there.
  *
  *  4. Flatten and join the array to make it into a string, then return that string.
+ *
+ *
+ *  DECODING ALGORITHM:
+ *  -Steps one and two are the same as the encoding algorithm.
+ *
+ *  3. Iterate for the length of the message, adding the current xIndex to the array
+ *     - The index of the "rail" or the row needs to increase and decrease in a
+ *       zig zag pattern. This happens when it reaches either the top or bottom
+ *       rail and has placed a letter there.
+ *
+ *  4. Flatten the fence array that we just filled, then populate a new array using the
+ *     the fence array to tell us what the index of the letter that we want is, in the
+ *     encoded message.
+ *
+ *  5. Join the decoded message to make a string and return it.
  */
 
 function encode(message, railCount) {
